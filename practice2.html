@@ -21,16 +21,18 @@
    display: grid;
    grid-template-areas:
     "header header"
-    "main sidebar"
+    "nav nav"
+    "section aside"
+    "main aside" 
     "footer footer"
    ;
    min-height: 100vh;
-   grid-template-rows: 3fr 6fr 1fr;
-   grid-template-columns: 8fr 2fr;
+   grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+   /* grid-template-columns: 8fr 2fr; */
    gap: 1rem;
   }
   span {
-   border: 2pt solid #303030;
+   border: 2pt solid #c84141;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -38,11 +40,18 @@
   .header {
    grid-area: header;
   }
-  .main {
-   grid-area: main;
+  .nav{
+    grid-area: nav;
   }
-  .sidebar {
-   grid-area: sidebar;
+  .section {
+   grid-area: section;
+  }
+  .aside {
+   grid-area: aside;
+  }
+  .main{
+    grid-area: main;
+
   }
   .footer {
    grid-area: footer;
@@ -53,8 +62,10 @@
 <body>
 <div>
   <span class="header">HEADER</span>
+  <span class="nav">Nav</span>
   <span class="main">MAIN</span>
-  <span class="sidebar">SIDEBAR</span>
+  <span class="section">section</span>
+  <span class="aside">aside</span>
   <span class="footer">FOOTER</span>
  </div>
 </body>
