@@ -5,62 +5,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>GRid</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-boz;
-            background: black
-            color: white
-        }
-        div {
-            display: grid; 
-            grid-template-areas: 
-            "header header" 
-            "main siderbar"
-            "footer footer"
-            ;
-            min-height: 100vp;
-            grid-template-rows: 3fr 6fr 1fr;
-            grid-template-columns: 8fr 2fr 2fr;
-            gap: 1rem;
-        }
-        span {
-            border: 2pt solid #404040
-        }
-            header {
-               background: gray;
-               grid-area: black; 
-            }
-            main{
-                grid-area: header;
-            }
-            sidebar{
-                grid-area: sidebar;
-            }
-            footer{
-                grid-area: footer;
-            }
-/*header, 
-aside,
-main,
-nav, 
-footer {
-       border: 2pt rgb
-}
-div {
-display: grid;
-grid-template-columns: 200px 500px 200px 500px; 
-}*/
-</style>
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+  :root {
+   background: black;
+   color: white;
+  }
+  body {
+   padding: 1rem;
+  }
+  div {
+   display: grid;
+   grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer"
+   ;
+   min-height: 100vh;
+   grid-template-rows: 3fr 6fr 1fr;
+   grid-template-columns: 8fr 2fr;
+   gap: 1rem;
+  }
+  span {
+   border: 2pt solid #303030;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .header {
+   grid-area: header;
+  }
+  .main {
+   grid-area: main;
+  }
+  .sidebar {
+   grid-area: sidebar;
+  }
+  .footer {
+   grid-area: footer;
+  }
+ </style>
+
 </head>
 <body>
-    <div>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <span>6</span>
-    </div>.
+<div>
+  <span class="header">HEADER</span>
+  <span class="main">MAIN</span>
+  <span class="sidebar">SIDEBAR</span>
+  <span class="footer">FOOTER</span>
+ </div>
 </body>
 </html>
