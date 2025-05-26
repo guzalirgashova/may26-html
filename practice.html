@@ -9,17 +9,37 @@
             margin: 0;
             padding: 0;
             box-sizing: border-boz;
+            background: black
+            color: white
         }
         div {
             display: grid; 
-            grid-template-columns: 1fr ;
-            grid-template-rows: 1fr 2fr 4fr;
+            grid-template-areas: 
+            "header header" 
+            "main siderbar"
+            "footer footer"
+            ;
+            min-height: 100vp;
+            grid-template-rows: 3fr 6fr 1fr;
+            grid-template-columns: 8fr 2fr 2fr;
             gap: 1rem;
         }
         span {
-            padding: 1rem;
-            border: 2pt solid rgb(20, 50, 25);
+            border: 2pt solid #404040
         }
+            header {
+               background: gray;
+               grid-area: black; 
+            }
+            main{
+                grid-area: header;
+            }
+            sidebar{
+                grid-area: sidebar;
+            }
+            footer{
+                grid-area: footer;
+            }
 /*header, 
 aside,
 main,
@@ -41,8 +61,6 @@ grid-template-columns: 200px 500px 200px 500px;
         <span>4</span>
         <span>5</span>
         <span>6</span>
-        <span>7</span>
-        <span>8</span>
     </div>.
 </body>
 </html>
